@@ -1,0 +1,2480 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #242f3f;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    animation: loader 2s infinite ease;
+  }
+  .loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+  }
+  
+  @keyframes loader {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(180deg);}
+    50% { transform: rotate(180deg);}
+    75% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg);}
+  }
+  
+  @keyframes loader-inner {
+    0% { height: 0%;}
+    25% { height: 0%;}
+    50% { height: 100%;}
+    75% { height: 100%;}
+    100% { height: 0%;}
+  }
+
+
+@font-face {
+    font-family: Gilroy-Heavy;
+    src: url(../fonts/Gilroy-Heavy.ttf);
+}
+
+@font-face {
+    font-family: Gilroy-Bold;
+    src: url(../fonts/Gilroy-Bold.ttf);
+}
+
+@font-face {
+    font-family: Gilroy-Medium;
+    src: url(../fonts/Gilroy-Medium.ttf);
+}
+
+@font-face {
+    font-family: Gilroy-Light;
+    src: url(../fonts/Gilroy-Light.ttf);
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    cursor: default;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+    font-family: 'Gilroy-Medium';
+    font-size: 1vw;
+    line-height: 1.5vw;
+    color: #FFFFFF;
+    opacity: 0.7;
+}
+
+h1 {
+    font-family: 'Gilroy-Medium';
+    font-size: 6vw;
+    line-height: 6vw;
+    /* identical to box height, or 94% */
+    letter-spacing: -0.04em;
+    color: #FFFFFF;
+    /* background: linear-gradient(to right, #5C6DF7 50%, #ffffff 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: all 2s; */
+}
+
+.nav {
+    transition: all 1s;
+}
+
+h1:hover {
+    background-position: 0 0;
+}
+
+h2 {
+    font-family: 'Gilroy-Bold';
+    font-size: 3vw;
+    line-height: 5vw;
+    /* identical to box height, or 94% */
+    color: #FFFFFF;
+}
+
+h3 {
+    font-family: 'Gilroy-Bold';
+    font-size: 1.5vw;
+    line-height: 3vw;
+    /* identical to box height, or 127% */
+    color: #FFFFFF;
+}
+
+h4 {
+    font-family: Gilroy-Medium;
+    font-size: .75vw;
+    line-height: 2vw;
+    /* identical to box height, or 127% */
+    color: #FFFFFF;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    padding: 0.1vw;
+    border-radius: 4.1px;
+    background: linear-gradient(177deg, rgba(255, 255, 255, 0.50) 0%, rgba(11, 17, 27, 0.30) 70.00%);
+}
+
+.buy-btn {
+    padding: 1vw 3.5vw;
+    border-radius: 4.1px;
+    background: #141E30;
+    color: #FFF;
+    text-align: center;
+    text-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.19);
+    font-size: 1.25vw;
+    font-family: Gilroy-Medium;
+    letter-spacing: -0.72px;
+    transition: all 0.8s;
+}
+
+.buy-btn:hover {
+    background: #FFF;
+    color: #000000;
+}
+
+span {
+    background: linear-gradient(267.28deg, #2FBCEB 10%, #D4B1ED 35%, #85F6FF 170%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -text-fill-color: transparent;
+}
+
+p {
+    font-family: 'Gilroy-Medium';
+    font-size: 1vw;
+    line-height: 1.5vw;
+    /* or 138% */
+    text-align: center;
+    color: #FFFFFF;
+    opacity: 0.7;
+}
+
+.btn {
+    padding: 1.2vw 2.5vw;
+    font-family: 'Gilroy-Bold';
+    font-size: 1.25vw;
+    line-height: 1.25vw;
+    /* identical to box height */
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 1vw;
+    background: #0267FF;
+    cursor: pointer;
+    background: radial-gradient(50% 50.00% at 50% 50.00%, #3FCFFF 0%, #00BAF9 100%);
+    box-shadow: 4px 25px 79px 0px rgba(86, 175, 251, 0.49);
+    transition: all 1s;
+}
+
+.btn:hover {
+    border-radius: 4vw;
+    color: #0B111B;
+    background: #D4B1ED;
+    transform: translateY(-.7vw);
+}
+
+body {
+    background: #0B111B;
+    /* filter: blur(13.5px); */
+}
+
+.more {
+    display: none;
+}
+
+.more2 {
+    display: none;
+}
+
+.more3 {
+    display: none;
+}
+
+.more4 {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.active2 {
+    display: block;
+}
+
+.active3 {
+    display: block;
+}
+
+.active4 {
+    display: block;
+}
+
+/* -------------------Navbar Management-----------
+---------------------- */
+
+nav {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 9vw 0.5vw 9vw;
+    gap: 5vw;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .nav-logo {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+nav .nav-logo .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav .nav-logo a {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: .5vw;
+    font-family: Gilroy-Heavy;
+    font-size: 2.5vw;
+    line-height: 2.2vw;
+    /* or 120% */
+    color: #FFFFFF;
+    background: linear-gradient(to right, #085FCE 50%, #ffffff 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: all 2s;
+}
+
+nav .nav-logo a:hover {
+    background-position: 0 0;
+}
+
+nav .nav-logo a:hover img {
+    transform: rotateY(180deg);
+}
+
+nav .nav-logo a img {
+    width: 3.5vw;
+    height: auto;
+    padding: 0.2vw;
+    transition: all 1s;
+}
+
+/* -----------------------right-menu ----------
+-----------*/
+nav .right-menu{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1vw;
+}
+
+nav .right-menu a img{
+    width: 3vw;
+    height: auto;
+    transition: 0.2s;
+    padding: 0.1vw;
+}
+
+/* -----------------------hero ----------
+-----------*/
+
+.hero {
+    width: 100%;
+    height: auto;
+    padding: 0vw 11vw 0 11vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: url(../images/herobg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    position: relative;
+}
+
+.hero .left {
+    width: 45%;
+    padding-right: 10%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    align-items: flex-start;
+    position: relative;
+}
+
+.hero .left p {
+    text-align: unset;
+}
+
+.hero .left .gap {
+    margin-bottom: 2vw;
+}
+
+.hero .bg {
+    width: 55%;
+    height: auto;
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+#ball1 {
+    width: 10vw;
+    height: auto;
+    position: absolute;
+    top: 20vw;
+    left: 2vw;
+    animation: shakeY 15s infinite;
+}
+
+#ball2 {
+    width: 8vw;
+    height: auto;
+    position: absolute;
+    top: 25vw;
+    right: 4vw;
+    animation: shakeY 13s infinite;
+    animation-delay: 1s;
+}
+
+#ball3 {
+    width: 5vw;
+    height: auto;
+    position: absolute;
+    top: 5vw;
+    right: 5vw;
+    animation: shakeY 15s infinite;
+    animation-delay: 2s;
+}
+
+#ball4 {
+    width: 2vw;
+    height: auto;
+    position: absolute;
+    top: 15vw;
+    left: -8vw;
+    animation: shakeY 10s infinite;
+}
+
+#ball5 {
+    width: 2.5vw;
+    height: auto;
+    position: absolute;
+    top: 13vw;
+    left: 6vw;
+    animation: shakeY 12s infinite;
+    animation-delay: 3s;
+}
+
+#ball6 {
+    width: 3vw;
+    height: auto;
+    position: absolute;
+    top: 33vw;
+    right: 1vw;
+    animation: shakeY 10s infinite;
+}
+
+
+
+/* -------------------------------section2----
+-------------- */
+
+.section2 {
+    padding: 5vw 20%;
+}
+
+.section2 .container {
+    width: 100%;
+    height: auto;
+    background: #0B121D;
+    border: 2px solid #162235;
+    box-shadow: 0px 2px 20px rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+}
+
+.section2 .container .top {
+    width: 100%;
+    height: auto;
+    padding: 1vw 1.5vw;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5vw;
+    border-bottom: 2px solid #272727;
+}
+
+.section2 .container .top .dot {
+    width: .7vw;
+    height: .7vw;
+    border-radius: 50%;
+    background: #FFFFFF;
+}
+
+.section2 .container .bottom {
+    padding: 3vw 5vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.section2 .container .bottom .heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: top;
+    font-size: 3vw;
+}
+
+
+/* --------------------------------------utility-----------
+-------------------------------- */
+
+.utility {
+    padding: 15vw 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10vw;
+    position: relative;
+}
+
+.utility h2 {
+    font-size: 5vw;
+}
+
+.utility img {
+    width: 40%;
+}
+
+.utility .element {
+    width: 4vw;
+    position: absolute;
+    top: 27vw;
+    animation: fadeInDown 2s infinite;
+    animation-direction: alternate;
+}
+
+.utility .box1 {
+    padding: 2vw 3vw;
+    background: rgba(36, 42, 51, 0.80);
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+    position: absolute;
+    top: 10vw;
+    left: 15vw;
+}
+
+.utility .box1:before {
+    content: '';
+    width: 2px;
+    height: 12vw;
+    background: #404A59;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+}
+
+.utility .box1:after {
+    content: '';
+    width: 5vw;
+    height: 2px;
+    background: #404A59;
+    position: absolute;
+    top: 172%;
+    left: 50%;
+}
+
+.utility .box1 h3 {
+    font-size: 1.5vw;
+}
+
+.utility .box1 ul li {
+    list-style: disc;
+    font-size: .9vw;
+}
+
+
+.utility .box2 {
+    padding: 2vw 3vw;
+    background: rgba(36, 42, 51, 0.80);
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+    position: absolute;
+    top: 25vw;
+    right: 15vw;
+}
+
+.utility .box2:before {
+    content: '';
+    width: 2px;
+    height: 12vw;
+    background: #404A59;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+}
+
+.utility .box2:after {
+    content: '';
+    width: 6.2vw;
+    height: 2px;
+    background: #404A59;
+    position: absolute;
+    top: 180%;
+    right: 49.3%;
+}
+
+.utility .box2 h3 {
+    font-size: 1.5vw;
+}
+
+.utility .box2 ul li {
+    list-style: disc;
+    font-size: .9vw;
+}
+
+.utility .box3 {
+    padding: 2vw 3vw;
+    background: rgba(36, 42, 51, 0.80);
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+    position: absolute;
+    top: 60vw;
+    left: 15.5vw;
+}
+
+.utility .box3:before {
+    content: '';
+    width: 5vw;
+    height: 2px;
+    background: #404A59;
+    position: absolute;
+    top: 40%;
+    left: 100%;
+}
+
+.utility .box3:after {
+    content: '';
+    width: 2px;
+    height: 10vw;
+    background: #404A59;
+    position: absolute;
+    top: -10.5%;
+    left: 129.5%;
+}
+
+.utility .box3 h3 {
+    font-size: 1.5vw;
+}
+
+.utility .box3 ul li {
+    list-style: disc;
+    font-size: .9vw;
+}
+
+/* ------------------------------------------tokenomics----------------
+----------------------- */
+
+.tokenomics {
+    width: 100%;
+    height: auto;
+    padding: 5vw 12vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    align-items: center;
+    position: relative;
+    background: url(../images/token\ bg.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-attachment: scroll;
+}
+
+.tokenomics h2 {
+    text-align: center;
+}
+
+.tokenomics p {
+    padding: 0 22vw;
+}
+
+.tokenomics .supply {
+    font-size: 1.5vw;
+
+}
+
+.tokenomics img {
+    margin-top: 3vw;
+    width: 70%;
+    position: relative;
+    left: -1vw;
+}
+
+.tokenomics .per1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1vw;
+    position: absolute;
+    top: 29.5vw;
+    left: 0vw;
+}
+
+.tokenomics .per4 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1vw;
+    position: absolute;
+    top: 29.5vw;
+    right: 2vw;
+}
+
+.tokenomics .per2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1vw;
+    position: absolute;
+    top: 38.8vw;
+    left: 0vw;
+}
+
+.tokenomics .per5 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1vw;
+    position: absolute;
+    top: 38.8vw;
+    right: 2vw;
+}
+
+.tokenomics .per3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1vw;
+    position: absolute;
+    top: 48vw;
+    left: 0vw;
+}
+
+.tokenomics .per6 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1vw;
+    position: absolute;
+    top: 48vw;
+    right: 2vw;
+}
+
+
+/* --------------------------------roadmap--------------
+--------------------------- */
+
+.roadmap {
+    width: 100%;
+    height: auto;
+    padding: 5vw 0;
+    position: relative;
+}
+
+.mob {
+    display: none;
+}
+
+.roadmap h2 {
+    text-align: center;
+}
+
+.roadmap img {
+    margin-top: 10vw;
+    width: 100%;
+}
+
+.roadmap .box1 {
+    width: 27vw;
+    position: absolute;
+    top: 12vw;
+    right: 26vw;
+}
+
+.roadmap .box1 .list {
+    padding: 2vw;
+    position: absolute;
+    top: 10vw;
+    left: 4vw;
+}
+
+.roadmap .box1 .list li {
+    list-style: disc;
+}
+
+.roadmap .box2 {
+    width: 22vw;
+    position: absolute;
+    top: 37vw;
+    right: 55vw;
+}
+
+.roadmap .box2 .list {
+    padding: 2vw;
+    position: absolute;
+    top: 10vw;
+    left: 1vw;
+}
+
+.roadmap .box2 .list li {
+    list-style: disc;
+}
+
+.roadmap .box3 {
+    width: 24vw;
+    position: absolute;
+    top: 35vw;
+    right: 10vw;
+}
+
+.roadmap .box3 .list {
+    padding: 2vw;
+    position: absolute;
+    top: 14vw;
+    left: 1vw;
+}
+
+.roadmap .box3 .list li {
+    list-style: disc;
+}
+
+/* -----------------------app ----------
+-----------*/
+
+.app-heading {
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+.app {
+    width: 100%;
+    height: auto;
+    padding: 5vw 15vw 5vw 15vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.app .left {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    align-items: flex-start;
+    position: relative;
+}
+
+.app .left p {
+    text-align: unset;
+}
+
+.app .left .list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app .left .list ul {
+    width: 30%;
+    height: auto;
+    padding-left: 1vw;
+}
+
+.app .left .list ul li {
+    list-style: disc;
+}
+
+.app .bg {
+    width: 55%;
+    height: auto;
+    position: relative;
+    display: flex;
+}
+
+.app .bg .phone1 {
+    width: 45%;
+    height: auto;
+    z-index: 1;
+    animation: fadeInLeft 2s;
+}
+
+.app .bg .phone2 {
+    width: 50%;
+    height: auto;
+    z-index: 2;
+    position: relative;
+    top: -3vw;
+    left: -7vw;
+    animation: fadeInDown 3s;
+    /* animation-delay: 1s; */
+}
+
+/* --------------------------------------work-----------
+---------------- */
+
+.work {
+    width: 100%;
+    height: auto;
+    padding: 5vw 15vw;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    background: url(../images/bg5522.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.work .left {
+    width: 40%;
+    height: auto;
+}
+
+.work .left h1 {
+    opacity: 0.1;
+    color: #FFF;
+    font-family: Gilroy-Bold;
+    letter-spacing: -4.8px;
+}
+
+.work .right {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.work .right form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4vw;
+}
+
+.work .right .input-field {
+    width: 100%;
+    height: auto;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 1vw 0;
+    background: transparent;
+    font-size: 1.3vw;
+    color: #fff;
+    transition: .3s ease;
+}
+
+#file {
+    display: none;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vw;
+    font-size: 1.2vw;
+    font-family: Gilroy-Medium;
+}
+
+label img {
+    width: 1vw;
+}
+
+.work .right form .btn-container .submit {
+    box-shadow: none;
+    border: none;
+}
+
+
+/* -----------------------------------contact----------
+---------------------- */
+
+.contact {
+    width: 100%;
+    height: auto;
+    padding: 7vw 12vw 0 12vw;
+}
+
+.contact .container {
+    width: 100%;
+    height: auto;
+    background: #1F252E;
+    padding: 5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact .container .left {
+    width: 40%;
+}
+
+.contact .container .left h2 {
+    font-size: 4vw;
+}
+
+.contact .container .left h2 img {
+    width: 2vw;
+}
+
+.contact .container .right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1vw;
+}
+
+
+.contact .container .right p {
+    text-align: right;
+}
+
+
+.contact .container .right .socials {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 1vw;
+}
+
+.contact .container .right .socials a img {
+    width: 3vw;
+    transition: all .25s;
+}
+
+.contact .container .right .socials a img:hover {
+    border-radius: 50%;
+    border: 0.2vw solid rgba(255, 255, 255, 0.50);
+}
+
+/* ---------------------footer----------
+--------------- */
+.footer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(5.5px);
+    justify-content: space-between;
+    padding: 10vw 3vw 5vw 3vw;
+    z-index: 2;
+}
+
+/* -------------------footer left------
+---------------- */
+.footer .left{
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1vw;
+    padding-right: 15vw;
+}
+
+.footer .left a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5vw;
+    font-family: 'Gilroy-Bold';
+    font-size: 2vw;
+    line-height: 2.2vw;
+    /* or 120% */
+    color: #FFFFFF;
+    background: linear-gradient(to right, #5C6DF7 50%, #ffffff 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: all 2s;
+}
+
+.footer .left a:hover {
+    background-position: 0 0;
+}
+
+.footer .left img {
+    width: 4vw;
+    height: auto;
+}
+
+.footer .left p {
+    text-align: initial;
+    font-family: 'Gilroy-Light';
+    font-size: 1vw;
+    line-height: 2vw;
+}
+
+/* -------------footer right-----------
+--------------  */
+
+.footer .right{
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer .right p{
+    text-align: initial;
+    line-height: 2vw;
+}
+
+.footer .right p:hover {
+    text-decoration: underline;
+}
+
+.footer .right .f1, .f2, .f3{
+    width: 30%;
+    height: auto;
+}
+
+.footer .right .f3{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .right .f3 .social-link {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5vw;
+}
+
+.footer .right .f3 .social-link a img{
+    width: 3vw;
+    height: auto;
+    padding: 0.1vw;
+    transition: all 0.3s;
+}
+
+.footer .right .f3 .social-link a:hover img{
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+}
+
+
+
+/* ------------------website responsive 980px---------
+------------------- */
+
+@media (max-width:980px) {
+    
+    h2 {
+        font-size: 4vw;
+        line-height: 6vw;
+    }
+    
+    h3 {
+        font-size: 2vw;
+        line-height: 4vw;
+    }
+
+    h4 {
+        font-size: 1vw;
+    }
+    
+    p {
+        font-size: 1.6vw;
+        line-height: 2.2vw;
+        opacity: 0.8;
+    }
+
+    .buy-btn {
+        font-size: 2vw;
+    }
+    
+    .btn {
+        padding: 1.3vw 2.5vw;
+        font-family: 'Gilroy-Bold';
+        font-size: 1.5vw;
+        border-radius: 2.5vw;
+    }
+    /* ------------------------navbar 980px--------
+    ------------------------ */
+    
+    nav .nav-logo a {
+        font-size: 3.5vw;
+        line-height: 3.5vw;
+    }
+    
+    nav .nav-logo a img {
+        width: 5.5vw;
+        height: auto;
+        padding: 0.2vw;
+        transition: all 1s;
+    }
+
+    /* -------------------------------section2 980px----
+-------------- */
+
+.section2 {
+    padding: 5vw 15%;
+}
+
+/* -----------------------app ----------
+-----------*/
+.app {
+    padding: 5vw 10vw 5vw 10vw;
+}
+
+
+/* ------------------------------------------tokenomics----------------
+----------------------- */
+
+.tokenomics {
+    width: 100%;
+    height: auto;
+    padding: 5vw 9vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    align-items: center;
+    position: relative;
+}
+
+.tokenomics h2 {
+    text-align: center;
+}
+
+.tokenomics p {
+    padding: 0 20vw;
+}
+
+.tokenomics .supply {
+    font-size: 2.5vw;
+
+}
+
+.tokenomics img {
+    margin-top: 3vw;
+    width: 70%;
+    position: relative;
+    left: -1vw;
+}
+
+.tokenomics .per1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1vw;
+    position: absolute;
+    top: 33.5vw;
+    left: 0vw;
+}
+
+.tokenomics .per4 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1vw;
+    position: absolute;
+    top: 33.5vw;
+    right: 2vw;
+}
+
+.tokenomics .per2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1vw;
+    position: absolute;
+    top: 43.5vw;
+    left: 0vw;
+}
+
+.tokenomics .per5 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1vw;
+    position: absolute;
+    top: 43.5vw;
+    right: 2vw;
+}
+
+.tokenomics .per3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1vw;
+    position: absolute;
+    top: 53.5vw;
+    left: 0vw;
+}
+
+.tokenomics .per6 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1vw;
+    position: absolute;
+    top: 53.5vw;
+    right: 2vw;
+}
+
+/* --------------------------------------utility-----------
+-------------------------------- */
+
+.utility {
+    padding: 15vw 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10vw;
+    position: relative;
+}
+
+.utility h2 {
+    font-size: 5vw;
+}
+
+.utility img {
+    width: 40%;
+}
+
+.utility .element {
+    width: 4vw;
+    position: absolute;
+    top: 27vw;
+    animation: fadeInDown 2s infinite;
+    animation-direction: alternate;
+}
+
+.utility .box1 {
+    padding: 2vw 3vw;
+    background: rgba(36, 42, 51, 0.80);
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+    position: absolute;
+    top: 10vw;
+    left: 5vw;
+}
+
+.utility .box1:before {
+    content: '';
+    width: 2px;
+    height: 10vw;
+    background: #404A59;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+}
+
+.utility .box1:after {
+    content: '';
+    width: 12vw;
+    height: 2px;
+    background: #404A59;
+    position: absolute;
+    top: 152%;
+    left: 50%;
+}
+
+.utility .box1 h3 {
+    font-size: 1.5vw;
+}
+
+.utility .box1 ul li {
+    list-style: disc;
+    font-size: 1.3vw;
+    line-height: 1.7vw;
+}
+
+
+.utility .box2 {
+    padding: 2vw 3vw;
+    background: rgba(36, 42, 51, 0.80);
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+    position: absolute;
+    top: 25vw;
+    right: 5vw;
+}
+
+.utility .box2:before {
+    content: '';
+    width: 2px;
+    height: 12vw;
+    background: #404A59;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+}
+
+.utility .box2:after {
+    content: '';
+    width: 14vw;
+    height: 2px;
+    background: #404A59;
+    position: absolute;
+    top: 170%;
+    right: 49.3%;
+}
+
+.utility .box2 h3 {
+    font-size: 1.5vw;
+}
+
+.utility .box2 ul li {
+    list-style: disc;
+    font-size: 1.3vw;
+    line-height: 1.7vw;
+}
+
+.utility .box3 {
+    padding: 2vw 3vw;
+    background: rgba(36, 42, 51, 0.80);
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+    position: absolute;
+    top: 55vw;
+    left: 5vw;
+}
+
+.utility .box3:before {
+    content: '';
+    width: 11vw;
+    height: 2px;
+    background: #404A59;
+    position: absolute;
+    top: 40%;
+    left: 100%;
+}
+
+.utility .box3:after {
+    content: '';
+    width: 2px;
+    height: 5vw;
+    background: #404A59;
+    position: absolute;
+    top: 17.5%;
+    left: 150.5%;
+}
+
+.utility .box3 h3 {
+    font-size: 1.5vw;
+}
+
+.utility .box3 ul li {
+    list-style: disc;
+    font-size: 1.3vw;
+    line-height: 1.7vw;
+}
+
+/* -----------------------roadmap-----------
+--------------- */
+
+.roadmap .box1 {
+    width: 28vw;
+    position: absolute;
+    top: 13vw;
+    right: 26vw;
+}
+
+.roadmap .box1 .list {
+    padding: 2vw;
+    position: absolute;
+    top: 10vw;
+    left: 4vw;
+}
+
+.roadmap .box1 .list li {
+    list-style: disc;
+}
+
+.roadmap .box2 {
+    width: 22vw;
+    position: absolute;
+    top: 40vw;
+    right: 57vw;
+}
+
+.roadmap .box2 .list {
+    padding: 2vw;
+    position: absolute;
+    top: 9vw;
+    left: 1vw;
+}
+
+.roadmap .box2 .list li {
+    list-style: disc;
+}
+
+.roadmap .box3 {
+    width: 24vw;
+    position: absolute;
+    top: 35vw;
+    right: 10vw;
+}
+
+.roadmap .box3 .list {
+    padding: 2vw;
+    position: absolute;
+    top: 13vw;
+    left: 1vw;
+}
+
+.roadmap .box3 .list li {
+    list-style: disc;
+}
+
+
+
+/* -----------------------------------contact----------
+---------------------- */
+
+.contact {
+    width: 100%;
+    height: auto;
+    padding: 7vw 9vw 0 9vw;
+}
+
+.contact .container {
+    width: 100%;
+    height: auto;
+    background: #1F252E;
+    padding: 5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact .container .left {
+    width: 50%;
+}
+
+.contact .container .left h2 {
+    font-size: 5vw;
+}
+
+.contact .container .left h2 img {
+    width: 3vw;
+}
+
+.contact .container .right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1vw;
+}
+
+
+.contact .container .right p {
+    text-align: right;
+}
+
+
+.contact .container .right .socials {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 1vw;
+}
+
+.contact .container .right .socials a img {
+    width: 3vw;
+    transition: all .25s;
+}
+
+.contact .container .right .socials a img:hover {
+    border-radius: 50%;
+    border: 0.2vw solid rgba(255, 255, 255, 0.50);
+}
+
+
+/* ---------------------footer----------
+--------------- */
+
+/* -------------------footer left------
+---------------- */
+.footer .left{
+    gap: 1vw;
+    padding-right: 10vw;
+}
+
+.footer .left a {
+    gap: 1vw;
+    font-size: 2.5vw;
+    line-height: 2.7vw;
+}
+
+.footer .left img {
+    width: 5vw;
+    height: auto;
+}
+
+.footer .left p {
+    font-size: 1.5vw;
+    line-height: 2.5vw;
+}
+
+/* -------------footer right-----------
+--------------  */
+
+.footer .right p{
+    text-align: initial;
+    line-height: 2.5vw;
+}
+
+.footer .right .f3 .social-link {
+    gap: 1.2vw;
+}
+
+.footer .right .f3 .social-link a img{
+    width: 4vw;
+}
+
+}
+
+/* ------------------website responsive 600px---------
+------------------- */
+
+@media (max-width:600px) {
+
+    h1 {
+        padding-top: 20vw;
+        font-size: 9vw;
+        line-height: 11vw;
+        text-align: center;
+        font-family: Gilroy-Bold;
+    }
+    
+    h2 {
+        font-size: 7vw;
+        line-height: 9vw;
+    }
+    
+    h3 {
+        font-size: 3vw;
+        line-height: 4vw;
+    }
+
+    h4 {
+        font-size: 1.4vw;
+    }
+    
+    p {
+        font-size: 3vw;
+        line-height: 4.5vw;
+        opacity: 1;
+    }
+
+    li {
+        font-size: 4vw;
+        line-height: 5vw;
+    }
+
+    .buy-btn {
+        font-size: 3.5vw;
+    }
+    
+    .btn {
+        padding: 3vw 4vw;
+        font-size: 3vw;
+        border-radius: 2.5vw;
+    }
+    
+    /* ------------------------navbar 980px--------
+    ------------------------ */
+    
+    nav .nav-logo a {
+        font-size: 5vw;
+        line-height: 5vw;
+    }
+    
+    nav .nav-logo a img {
+        width: 7vw;
+        height: auto;
+        padding: 0.2vw;
+        transition: all 1s;
+    }
+    
+    /* -----------------------hero 600px----------
+    -----------*/
+
+.hero {
+    width: 100%;
+    height: auto;
+    padding: 0vw 11vw 0 11vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/herobg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    position: relative;
+}
+
+.hero .left {
+    width: 100%;
+    padding-right: 0%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+    align-items: center;
+    position: relative;
+}
+
+.hero .left p {
+    text-align: center;
+}
+
+.hero .bg {
+    width: 70%;
+    height: auto;
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+#ball1 {
+    width: 15vw;
+    height: auto;
+    position: absolute;
+    top: 25vw;
+    left: -5vw;
+}
+
+#ball2 {
+    width: 12vw;
+    height: auto;
+    position: absolute;
+    top: 35vw;
+    right: 0vw;
+    animation: shakeY 13s infinite;
+    animation-delay: 1s;
+}
+
+#ball3 {
+    width: 10vw;
+    height: auto;
+    position: absolute;
+    top: 30vw;
+    right: -5vw;
+    animation: shakeY 10s infinite;
+    animation-delay: 2s;
+}
+
+#ball4 {
+    width: 6vw;
+    height: auto;
+    position: absolute;
+    top: 15vw;
+    left: -4vw;
+    animation: shakeY 12s infinite;
+}
+
+#ball5 {
+    width: 7vw;
+    height: auto;
+    position: absolute;
+    top: 9vw;
+    left: 7vw;
+    animation: shakeY 12s infinite;
+    animation-delay: 3s;
+}
+
+#ball6 {
+    width: 6vw;
+    height: auto;
+    position: absolute;
+    top: 50vw;
+    right: -7vw;
+    animation: shakeY 10s infinite;
+}
+    
+    /* -------------------------------section2 600px----
+    -------------- */
+    
+    .section2 {
+        padding: 5vw 10%;
+    }
+    
+    .section2 .container {
+        border-radius: 8px;
+    }
+    
+    .section2 .container .top {
+        padding: 2vw 3vw;
+        gap: 1.5vw;
+    }
+    
+    .section2 .container .top .dot {
+        width: 1.7vw;
+        height: 1.7vw;
+    }
+    
+    .section2 .container .bottom {
+        gap: 2.5vw;
+    }
+    
+    .section2 .container .bottom .heading {
+        font-size: 4.3vw;
+    }
+
+
+    
+/* -----------------------app ----------
+-----------*/
+
+.app-heading {
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+.app {
+    width: 100%;
+    height: auto;
+    padding: 5vw 10vw 5vw 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5vw;
+    align-items: center;
+    position: relative;
+}
+
+.app .left {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    position: relative;
+}
+
+.app .left p {
+    text-align: center;
+}
+
+.app .left .list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.app .left .list ul {
+    width: 50%;
+    height: auto;
+    padding-left: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app .left .list ul li {
+    list-style: disc;
+    margin-top: 2vw;
+}
+
+.app .bg {
+    width: 80%;
+    height: auto;
+    position: relative;
+    display: flex;
+}
+
+.app .bg .phone1 {
+    width: 45%;
+    height: auto;
+    z-index: 1;
+    animation: fadeInLeft 2s;
+}
+
+.app .bg .phone2 {
+    width: 50%;
+    height: auto;
+    z-index: 2;
+    position: relative;
+    top: -3vw;
+    left: -7vw;
+    animation: fadeInRight 3s;
+    /* animation-delay: 1s; */
+}
+
+
+/* --------------------------------------work-----------
+---------------- */
+
+.work {
+    width: 100%;
+    height: auto;
+    padding: 5vw 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between;
+    background: none;
+    gap: 10vw;
+}
+
+.work .left {
+    width: 100%;
+    height: auto;
+}
+
+.work .left h1 {
+    opacity: .7;
+    color: #FFF;
+    font-family: Gilroy-Bold;
+    letter-spacing: 0px;
+}
+
+.work .right {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.work .right form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8vw;
+}
+
+.work .right .input-field {
+    width: 100%;
+    height: auto;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 1vw 0;
+    background: transparent;
+    font-size: 4vw;
+    color: #fff;
+    transition: .3s ease;
+}
+
+#file {
+    display: none;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2vw;
+    font-size: 4vw;
+    font-family: Gilroy-Medium;
+}
+
+label img {
+    width: 4vw;
+}
+
+.work .right form .btn-container .submit {
+    box-shadow: none;
+    border: none;
+}
+
+
+/* --------------------------------------utility-----------
+-------------------------------- */
+
+.utility {
+    padding: 25vw 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30vw;
+    position: relative;
+}
+
+.utility h2 {
+    font-size: 8vw;
+    position: relative;
+    top: -10vw;
+}
+
+.utility img {
+    width: 60%;
+    margin-bottom: 20vw;
+}
+
+.utility .element {
+    width: 6vw;
+    position: absolute;
+    top: 75vw;
+    animation: fadeInDown 2s infinite;
+    animation-direction: alternate;
+}
+
+.utility .box1 {
+    padding: 2vw 5vw;
+    background: rgba(36, 42, 51, 0.80);
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+    position: absolute;
+    top: 35vw;
+    left: 3vw;
+}
+
+.utility .box1:before {
+    content: '';
+    width: 2px;
+    height: 15.5vw;
+    background: #404A59;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+}
+
+.utility .box1:after {
+    content: '';
+    width: 12vw;
+    height: 2px;
+    background: #404A59;
+    position: absolute;
+    top: 152%;
+    left: 50%;
+    display: none;
+}
+
+.utility .box1 h3 {
+    font-size: 3vw;
+}
+
+.utility .box1 ul li {
+    list-style: disc;
+    font-size: 1.8vw;
+    line-height: 2.5vw;
+}
+
+
+.utility .box2 {
+    padding: 2vw 5vw;
+    background: rgba(36, 42, 51, 0.80);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+    position: absolute;
+    top: 55vw;
+    right: 5vw;
+}
+
+.utility .box2:before {
+    content: '';
+    width: 2px;
+    height: 20vw;
+    background: #404A59;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+}
+
+.utility .box2:after {
+    content: '';
+    width: 14vw;
+    height: 2px;
+    background: #404A59;
+    position: absolute;
+    top: 170%;
+    right: 49.3%;
+    display: none;
+}
+
+.utility .box2 h3 {
+    font-size: 1.5vw;
+}
+
+.utility .box2 ul li {
+    list-style: disc;
+    font-size: 1.8vw;
+    line-height: 2.3vw;
+}
+
+.utility .box3 {
+    padding: 2vw 5vw;
+    background: rgba(36, 42, 51, 0.80);
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+    position: absolute;
+    top: 115vw;
+    left: 35%;
+}
+
+.utility .box3:before {
+    content: '';
+    width: 12.5vw;
+    height: 2px;
+    background: #404A59;
+    position: absolute;
+    top: 40%;
+    left: -40%;
+}
+
+.utility .box3:after {
+    content: '';
+    width: 2px;
+    height: 25vw;
+    background: #404A59;
+    position: absolute;
+    top: -46%;
+    left: -40%;
+}
+
+.utility .box3 h3 {
+    font-size: 3vw;
+}
+
+.utility .box3 ul li {
+    list-style: disc;
+    font-size: 1.8vw;
+    line-height: 2.5vw;
+}
+
+
+/* ------------------------------------------tokenomics----------------
+----------------------- */
+
+.tokenomics {
+    width: 100%;
+    height: auto;
+    padding: 5vw 5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    align-items: center;
+    position: relative;
+    background-position: center;
+}
+
+.tokenomics h2 {
+    text-align: center;
+}
+
+.tokenomics p {
+    padding: 0 9vw;
+}
+
+.tokenomics .supply {
+    font-size: 3.5vw;
+
+}
+
+.tokenomics img {
+    margin-top: 7vw;
+    width: 90%;
+    position: relative;
+    left: -1vw;
+}
+
+.tokenomics .per1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1vw;
+    position: absolute;
+    top: 57vw;
+    left: 0vw;
+}
+
+.tokenomics .per4 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1vw;
+    position: absolute;
+    top: 57vw;
+    right: 2vw;
+}
+
+.tokenomics .per2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1vw;
+    position: absolute;
+    top: 71.5vw;
+    left: 0vw;
+}
+
+.tokenomics .per5 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1vw;
+    position: absolute;
+    top: 71.5vw;
+    right: 2vw;
+}
+
+.tokenomics .per3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1vw;
+    position: absolute;
+    top: 86vw;
+    left: 0vw;
+}
+
+.tokenomics .per6 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1vw;
+    position: absolute;
+    top: 86vw;
+    right: 2vw;
+}
+
+
+/* --------------------------------roadmap--------------
+--------------------------- */
+
+.mob {
+    display: block;
+    width: 100%;
+    height: 250vw;
+    margin-bottom: 20vw;
+}
+
+.web {
+    display: none;
+}
+
+.roadmap {
+    width: 100%;
+    height: auto;
+    padding: 5vw 0;
+    position: relative;
+}
+
+.roadmap h2 {
+    text-align: center;
+}
+
+.roadmap img {
+    margin-top: 10vw;
+    width: 100%;
+}
+
+.roadmap .box1 {
+    width: 70vw;
+    position: absolute;
+    top: 33vw;
+    left: 30vw;
+}
+
+.roadmap .box1 img {
+    transform: rotate(-90deg);
+}
+
+.roadmap .box1 .list {
+    padding-right: 12vw;
+    position: absolute;
+    top: 1vw;
+    left: 13vw;
+}
+
+.roadmap .box1 .list li {
+    font-size: 3vw;
+    list-style: disc;
+}
+
+.roadmap .box2 {
+    width: 65vw;
+    position: absolute;
+    top: 100vw;
+    left: 20vw;
+}
+
+.roadmap .box2 img {
+    transform: rotate(90deg);
+}
+
+.roadmap .box2 .list {
+    padding: 0vw;
+    position: absolute;
+    top: 20vw;
+    left: 8vw;
+}
+
+.roadmap .box2 .list li {
+    list-style: disc;
+    font-size: 3vw;
+}
+
+.roadmap .box3 {
+    width: 65vw;
+    position: absolute;
+    top: 185vw;
+    right: 5vw;
+}
+
+.roadmap .box3 .list {
+    position: absolute;
+    top: 20vw;
+    left: 4vw;
+}
+
+.roadmap .box3 .list li {
+    list-style: disc;
+    font-size: 3vw;
+}
+
+
+
+/* -----------------------------------contact----------
+---------------------- */
+
+.contact .container {
+    width: 100%;
+    height: auto;
+    background: #1F252E;
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    border-radius: 5vw;
+}
+
+.contact .container .left {
+    width: 100%;
+}
+
+.contact .container .left h2 {
+    font-size: 6vw;
+    text-align: center;
+}
+
+.contact .container .left h2 img {
+    width: 4vw;
+}
+
+.contact .container .right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+}
+
+
+.contact .container .right p {
+    text-align: center;
+}
+
+
+.contact .container .right .socials {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 3vw;
+}
+
+.contact .container .right .socials a img {
+    width: 5vw;
+    transition: all .25s;
+}
+
+.contact .container .right .socials a img:hover {
+    border-radius: 50%;
+    border: 0.2vw solid rgba(255, 255, 255, 0.50);
+}
+
+    
+    /* ---------------------footer----------
+    --------------- */
+    .footer{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 5vw;
+        background: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(5.5px);
+        justify-content: space-between;
+        align-items: center;
+        padding: 30vw 10vw 2vw 10vw;
+        z-index: 1000;
+    }
+    
+    /* -------------------footer left------
+    ---------------- */
+    .footer .left{
+        width: 100%;
+        gap: 2vw;
+        padding-right: 0vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        order: 2;
+    }
+    
+    .footer .left a {
+        gap: 1.5vw;
+        font-size: 5vw;
+        line-height: 3.2vw;
+    }
+    
+    .footer .left img {
+        width: 6vw;
+        height: auto;
+    }
+    
+    .footer .left p {
+        text-align: center;
+        font-size: 3vw;
+        line-height: 5vw;
+    }
+    
+    /* -------------footer right-----------
+    --------------  */
+    
+    .footer .right{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer .right .f1,.f2,.f3 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .right h3 {
+        font-size: 8vw;
+        line-height: 7vw;
+        text-align: center;
+        margin-bottom: 2vw;
+        margin-top: 2vw;
+    }
+    
+    .footer .right p{
+        font-size: 3vw;
+        line-height: 7vw;
+        text-align: center;
+    }
+    
+    .footer .right .f3 .social-link a img{
+        width: 10vw;
+        height: auto;
+        padding: 0.5vw;
+        transition: all 0.3s;
+    }
+
+}
